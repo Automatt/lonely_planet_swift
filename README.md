@@ -13,3 +13,8 @@ This is just a work in progress and a place to play around with Swift.
 - Show map element for each place
 - Way to browse all places on a map
 
+
+![](https://dl.dropbox.com/s/nplfrmu5vyak8i5/Screenshot%202015-04-02%2009.38.53.png?dl=0)
+
+
+![](https://dl.dropbox.com/s/bkk3x6g13q3pnw9/Screenshot%202015-04-02%2009.39.10.png?dl=0)
