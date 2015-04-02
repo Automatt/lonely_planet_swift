@@ -7,12 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AF3CAB651ACB7E45007831A6 /* PlacesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3CAB641ACB7E45007831A6 /* PlacesTableViewController.swift */; };
+		AF6A22831ACD0C3900E683E2 /* Destinations.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6A22821ACD0C3900E683E2 /* Destinations.swift */; };
 		AF9E3B5A1ACB3D6B009F8592 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9E3B591ACB3D6B009F8592 /* AppDelegate.swift */; };
-		AF9E3B5C1ACB3D6B009F8592 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9E3B5B1ACB3D6B009F8592 /* ViewController.swift */; };
 		AF9E3B5F1ACB3D6B009F8592 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF9E3B5D1ACB3D6B009F8592 /* Main.storyboard */; };
 		AF9E3B611ACB3D6B009F8592 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF9E3B601ACB3D6B009F8592 /* Images.xcassets */; };
 		AF9E3B641ACB3D6B009F8592 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF9E3B621ACB3D6B009F8592 /* LaunchScreen.xib */; };
 		AF9E3B701ACB3D6C009F8592 /* AtlasTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9E3B6F1ACB3D6C009F8592 /* AtlasTests.swift */; };
+		AF9E3B7A1ACB3E00009F8592 /* Taxonomy.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9E3B791ACB3E00009F8592 /* Taxonomy.swift */; };
+		AF9E3B7E1ACB40F5009F8592 /* destinations.xml in Resources */ = {isa = PBXBuildFile; fileRef = AF9E3B7C1ACB40F5009F8592 /* destinations.xml */; };
+		AF9E3B7F1ACB40F5009F8592 /* taxonomy.xml in Resources */ = {isa = PBXBuildFile; fileRef = AF9E3B7D1ACB40F5009F8592 /* taxonomy.xml */; };
+		AFAD325E1ACCFAD400186321 /* PlaceDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFAD325D1ACCFAD400186321 /* PlaceDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,16 +31,23 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AF3CAB641ACB7E45007831A6 /* PlacesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlacesTableViewController.swift; sourceTree = "<group>"; };
+		AF5DDE381ACD02AD0033AEF5 /* Destination_parsing.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Destination_parsing.playground; sourceTree = "<group>"; };
+		AF6A22821ACD0C3900E683E2 /* Destinations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Destinations.swift; sourceTree = "<group>"; };
 		AF9E3B541ACB3D6B009F8592 /* Atlas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Atlas.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF9E3B581ACB3D6B009F8592 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AF9E3B591ACB3D6B009F8592 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AF9E3B5B1ACB3D6B009F8592 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		AF9E3B5E1ACB3D6B009F8592 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AF9E3B601ACB3D6B009F8592 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		AF9E3B631ACB3D6B009F8592 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		AF9E3B691ACB3D6C009F8592 /* AtlasTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AtlasTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF9E3B6E1ACB3D6C009F8592 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AF9E3B6F1ACB3D6C009F8592 /* AtlasTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtlasTests.swift; sourceTree = "<group>"; };
+		AF9E3B791ACB3E00009F8592 /* Taxonomy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Taxonomy.swift; sourceTree = "<group>"; };
+		AF9E3B7B1ACB4097009F8592 /* Taxonomy_parsing.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Taxonomy_parsing.playground; sourceTree = "<group>"; };
+		AF9E3B7C1ACB40F5009F8592 /* destinations.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = destinations.xml; sourceTree = "<group>"; };
+		AF9E3B7D1ACB40F5009F8592 /* taxonomy.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = taxonomy.xml; sourceTree = "<group>"; };
+		AFAD325D1ACCFAD400186321 /* PlaceDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,12 +68,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AF5DDE371ACD02830033AEF5 /* Playgrounds */ = {
+			isa = PBXGroup;
+			children = (
+				AF9E3B7B1ACB4097009F8592 /* Taxonomy_parsing.playground */,
+				AF5DDE381ACD02AD0033AEF5 /* Destination_parsing.playground */,
+			);
+			name = Playgrounds;
+			sourceTree = "<group>";
+		};
 		AF9E3B4B1ACB3D6B009F8592 = {
 			isa = PBXGroup;
 			children = (
 				AF9E3B561ACB3D6B009F8592 /* Atlas */,
 				AF9E3B6C1ACB3D6C009F8592 /* AtlasTests */,
 				AF9E3B551ACB3D6B009F8592 /* Products */,
+				AF5DDE371ACD02830033AEF5 /* Playgrounds */,
 			);
 			sourceTree = "<group>";
 		};
@@ -77,9 +99,14 @@
 		AF9E3B561ACB3D6B009F8592 /* Atlas */ = {
 			isa = PBXGroup;
 			children = (
-				AF9E3B591ACB3D6B009F8592 /* AppDelegate.swift */,
-				AF9E3B5B1ACB3D6B009F8592 /* ViewController.swift */,
+				AF9E3B7C1ACB40F5009F8592 /* destinations.xml */,
+				AF9E3B7D1ACB40F5009F8592 /* taxonomy.xml */,
+				AF9E3B791ACB3E00009F8592 /* Taxonomy.swift */,
+				AF6A22821ACD0C3900E683E2 /* Destinations.swift */,
+				AF3CAB641ACB7E45007831A6 /* PlacesTableViewController.swift */,
+				AFAD325D1ACCFAD400186321 /* PlaceDetailViewController.swift */,
 				AF9E3B5D1ACB3D6B009F8592 /* Main.storyboard */,
+				AF9E3B591ACB3D6B009F8592 /* AppDelegate.swift */,
 				AF9E3B601ACB3D6B009F8592 /* Images.xcassets */,
 				AF9E3B621ACB3D6B009F8592 /* LaunchScreen.xib */,
 				AF9E3B571ACB3D6B009F8592 /* Supporting Files */,
@@ -192,8 +219,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF9E3B7E1ACB40F5009F8592 /* destinations.xml in Resources */,
 				AF9E3B5F1ACB3D6B009F8592 /* Main.storyboard in Resources */,
 				AF9E3B641ACB3D6B009F8592 /* LaunchScreen.xib in Resources */,
+				AF9E3B7F1ACB40F5009F8592 /* taxonomy.xml in Resources */,
 				AF9E3B611ACB3D6B009F8592 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -212,7 +241,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AF9E3B5C1ACB3D6B009F8592 /* ViewController.swift in Sources */,
+				AF9E3B7A1ACB3E00009F8592 /* Taxonomy.swift in Sources */,
+				AF6A22831ACD0C3900E683E2 /* Destinations.swift in Sources */,
+				AFAD325E1ACCFAD400186321 /* PlaceDetailViewController.swift in Sources */,
+				AF3CAB651ACB7E45007831A6 /* PlacesTableViewController.swift in Sources */,
 				AF9E3B5A1ACB3D6B009F8592 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -405,6 +437,7 @@
 				AF9E3B751ACB3D6C009F8592 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AF9E3B761ACB3D6C009F8592 /* Build configuration list for PBXNativeTarget "AtlasTests" */ = {
 			isa = XCConfigurationList;
@@ -413,6 +446,7 @@
 				AF9E3B781ACB3D6C009F8592 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
