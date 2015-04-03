@@ -59,7 +59,7 @@ class PlaceDetailViewController: UITableViewController {
     
     func setTitleForCell(cell:FactCell, indexPath: NSIndexPath) {
         let item = factItems[indexPath.row] as Fact
-        cell.titleLabel.text = item.title.capitalizedString ?? "[No Title]"
+        cell.titleLabel.text = item.title.capitalizedString.replace("_", withString:" ") ?? "[No Title]"
     }
     
     func setContentForCell(cell:FactCell, indexPath: NSIndexPath) {
