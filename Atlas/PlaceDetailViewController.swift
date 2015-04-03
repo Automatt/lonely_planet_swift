@@ -8,12 +8,12 @@
 
 import UIKit
 
-class PlaceDetailViewController: UIViewController {
-    
-    @IBOutlet weak var placeText: UITextView!
+class PlaceDetailViewController: UITableViewController {
     
     var placeNode: Node = Node()
     var placeDestination: Destination = Destination()
+    var factItems: NSMutableArray = []
+    let factCellIdentifier = "FactCell"
         
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,9 +24,7 @@ class PlaceDetailViewController: UIViewController {
             self.navigationItem.title = placeNode.name
         }
         if placeDestination.title != "" {
-            placeText.text = placeDestination.facts[0].content
-            placeText.sizeToFit()
-            
+           loadInitialData()
         }
     }
 
@@ -35,14 +33,43 @@ class PlaceDetailViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        // Return the number of sections.
+        return 1
     }
-    */
-
+    
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        // Return the number of rows in the section.
+        return factItems.count
+    }
+    
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        
+        
+         return factCellAtIndexPath(indexPath)
+    }
+    
+    func factCellAtIndexPath(indexPath: NSIndexPath) -> FactCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier(factCellIdentifier) as FactCell
+    
+        setTitleForCell(cell, indexPath: indexPath)
+        setContentForCell(cell, indexPath: indexPath)
+        return cell
+    }
+    
+    func setTitleForCell(cell:FactCell, indexPath: NSIndexPath) {
+        let item = factItems[indexPath.row] as Fact
+        cell.titleLabel.text = item.title.capitalizedString ?? "[No Title]"
+    }
+    
+    func setContentForCell(cell:FactCell, indexPath: NSIndexPath) {
+        let item = factItems[indexPath.row] as Fact
+        cell.contentLabel.text = item.content ?? "[No Content]"
+    }
+    
+    func loadInitialData() {
+        for fact in self.placeDestination.facts {
+            self.factItems.addObject(fact)
+        }
+    }
 }

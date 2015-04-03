@@ -18,6 +18,7 @@
 		AF9E3B7E1ACB40F5009F8592 /* destinations.xml in Resources */ = {isa = PBXBuildFile; fileRef = AF9E3B7C1ACB40F5009F8592 /* destinations.xml */; };
 		AF9E3B7F1ACB40F5009F8592 /* taxonomy.xml in Resources */ = {isa = PBXBuildFile; fileRef = AF9E3B7D1ACB40F5009F8592 /* taxonomy.xml */; };
 		AFAD325E1ACCFAD400186321 /* PlaceDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFAD325D1ACCFAD400186321 /* PlaceDetailViewController.swift */; };
+		AFE867CD1ACE2A8600A9DF51 /* FactCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE867CC1ACE2A8600A9DF51 /* FactCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		AF9E3B7C1ACB40F5009F8592 /* destinations.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = destinations.xml; sourceTree = "<group>"; };
 		AF9E3B7D1ACB40F5009F8592 /* taxonomy.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = taxonomy.xml; sourceTree = "<group>"; };
 		AFAD325D1ACCFAD400186321 /* PlaceDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceDetailViewController.swift; sourceTree = "<group>"; };
+		AFE867CC1ACE2A8600A9DF51 /* FactCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FactCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 				AF6A22821ACD0C3900E683E2 /* Destinations.swift */,
 				AF3CAB641ACB7E45007831A6 /* PlacesTableViewController.swift */,
 				AFAD325D1ACCFAD400186321 /* PlaceDetailViewController.swift */,
+				AFE867CC1ACE2A8600A9DF51 /* FactCell.swift */,
 				AF9E3B5D1ACB3D6B009F8592 /* Main.storyboard */,
 				AF9E3B591ACB3D6B009F8592 /* AppDelegate.swift */,
 				AF9E3B601ACB3D6B009F8592 /* Images.xcassets */,
@@ -242,6 +245,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF9E3B7A1ACB3E00009F8592 /* Taxonomy.swift in Sources */,
+				AFE867CD1ACE2A8600A9DF51 /* FactCell.swift in Sources */,
 				AF6A22831ACD0C3900E683E2 /* Destinations.swift in Sources */,
 				AFAD325E1ACCFAD400186321 /* PlaceDetailViewController.swift in Sources */,
 				AF3CAB651ACB7E45007831A6 /* PlacesTableViewController.swift in Sources */,

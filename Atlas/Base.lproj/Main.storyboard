@@ -27,7 +27,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="XxH-7g-bKF" kind="push" identifier="showPlaceDetail" id="1jl-e4-dep"/>
+                                    <segue destination="HVW-Kk-2SS" kind="push" identifier="showPlaceDetail" id="wAQ-5U-s0L"/>
                                 </connections>
                             </tableViewCell>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="3sn-pn-1Cd" style="IBUITableViewCellStyleDefault" id="M2C-17-jFV">
@@ -72,35 +72,59 @@
             <point key="canvasLocation" x="996" y="410"/>
         </scene>
         <!--Place Detail-->
-        <scene sceneID="AdQ-1t-ZWT">
+        <scene sceneID="O2J-em-E2o">
             <objects>
-                <viewController id="XxH-7g-bKF" customClass="PlaceDetailViewController" customModule="Atlas" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="1sM-WU-q40"/>
-                        <viewControllerLayoutGuide type="bottom" id="M9Y-JB-gR4"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="9iK-vF-0Uu">
+                <tableViewController id="HVW-Kk-2SS" customClass="PlaceDetailViewController" customModule="Atlas" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="BgR-8h-PG6">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AEI-gP-La0">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Place Detail" id="UlF-sI-lBo"/>
-                    <connections>
-                        <outlet property="placeText" destination="AEI-gP-La0" id="KiZ-oq-0Sr"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="T7a-2l-nXT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="FactCell" rowHeight="82" id="0UU-mo-bwp" customClass="FactCell" customModule="Atlas" customModuleProvider="target">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0UU-mo-bwp" id="pC7-zb-gDj">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="751" verticalHuggingPriority="751" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" text="Title" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="11g-1p-IiO">
+                                            <rect key="frame" x="20" y="20" width="280" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="750" verticalHuggingPriority="750" text="Content" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JVZ-Lh-TRz">
+                                            <rect key="frame" x="20" y="45" width="280" height="17"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="14"/>
+                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="JVZ-Lh-TRz" secondAttribute="trailing" constant="20" id="MEo-ow-gcf"/>
+                                        <constraint firstAttribute="trailing" secondItem="11g-1p-IiO" secondAttribute="trailing" constant="20" id="SbC-qD-MaT"/>
+                                        <constraint firstItem="JVZ-Lh-TRz" firstAttribute="top" secondItem="11g-1p-IiO" secondAttribute="bottom" constant="4" id="agz-5B-mez"/>
+                                        <constraint firstItem="11g-1p-IiO" firstAttribute="leading" secondItem="pC7-zb-gDj" secondAttribute="leading" constant="20" id="ldT-5T-f5s"/>
+                                        <constraint firstItem="JVZ-Lh-TRz" firstAttribute="leading" secondItem="pC7-zb-gDj" secondAttribute="leading" constant="20" id="p5C-2T-3qg"/>
+                                        <constraint firstItem="11g-1p-IiO" firstAttribute="top" secondItem="pC7-zb-gDj" secondAttribute="top" constant="20" id="qfY-3D-Gzr"/>
+                                        <constraint firstAttribute="bottom" secondItem="JVZ-Lh-TRz" secondAttribute="bottom" constant="19.5" id="xbE-OV-lfh"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <connections>
+                                    <outlet property="contentLabel" destination="JVZ-Lh-TRz" id="aRH-MA-je9"/>
+                                    <outlet property="titleLabel" destination="11g-1p-IiO" id="XGc-w6-0iP"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="HVW-Kk-2SS" id="z4J-Xd-b9f"/>
+                            <outlet property="delegate" destination="HVW-Kk-2SS" id="9Dt-Sy-f1q"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Place Detail" id="Hfo-Z5-JmR"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="di7-9m-w62" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1408" y="410"/>
+            <point key="canvasLocation" x="1430" y="407"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="hjU-TH-Li9">
