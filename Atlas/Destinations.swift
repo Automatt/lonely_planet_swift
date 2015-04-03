@@ -54,7 +54,6 @@ class DestinationParser: NSObject, NSXMLParserDelegate {
         
         let atlas = Atlas()
         atlas.destinations = destinations
-        
         return atlas
     }
     
@@ -79,10 +78,7 @@ class DestinationParser: NSObject, NSXMLParserDelegate {
             break
         }
         
-        currentElementName = elementName
-        
-        println(elementName)
-        
+        currentElementName = elementName        
     }
     
     func parser(parser: NSXMLParser!, foundCDATA CDATABlock: NSData!) {

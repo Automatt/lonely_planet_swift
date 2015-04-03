@@ -18,8 +18,6 @@ class PlaceDetailViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
-        
         if placeNode.atlas_node_id != "" {
             self.navigationItem.title = placeNode.name
         }
@@ -30,23 +28,18 @@ class PlaceDetailViewController: UITableViewController {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        // Return the number of sections.
         return 1
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // Return the number of rows in the section.
         return factItems.count
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        
-        
-         return factCellAtIndexPath(indexPath)
+        return factCellAtIndexPath(indexPath)
     }
     
     func factCellAtIndexPath(indexPath: NSIndexPath) -> FactCell {
