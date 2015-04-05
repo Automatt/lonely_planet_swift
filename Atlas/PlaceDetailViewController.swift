@@ -10,20 +10,35 @@ import UIKit
 
 class PlaceDetailViewController: UITableViewController {
     
+    @IBOutlet weak var placeImageView: UIImageView!
+    @IBOutlet weak var imageLoadButton: UIButton!
+    
     var placeNode: Node = Node()
     var placeDestination: Destination = Destination()
     var factItems: NSMutableArray = []
+    
     let factCellIdentifier = "FactCell"
-        
+    let flickr = Flickr()
+    var flickrPhotos = [FlickrSearchResults]()
+    var currentImageIndex = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        currentImageIndex = 0
 
         if placeNode.atlas_node_id != "" {
             self.navigationItem.title = placeNode.name
         }
         if placeDestination.title != "" {
-           loadInitialData()
+            loadInitialData()
+            loadFlickrImage()
         }
+        
+    }
+    
+    @IBAction func loadImage(sender: AnyObject) {
+        showNextImage()
     }
 
     override func didReceiveMemoryWarning() {
@@ -64,5 +79,30 @@ class PlaceDetailViewController: UITableViewController {
         for fact in self.placeDestination.facts {
             self.factItems.addObject(fact)
         }
+    }
+    
+    func loadFlickrImage() {
+
+        let activityIndicator = UIActivityIndicatorView(activityIndicatorStyle: .Gray)
+        placeImageView.addSubview(activityIndicator)
+        activityIndicator.frame = placeImageView.bounds
+        activityIndicator.startAnimating()
+        
+        flickr.searchFlickrForTerm(placeNode.name) {
+            results, error in
+        
+            self.imageLoadButton.setTitle("Next Image", forState: .Normal)
+            self.flickrPhotos.insert(results!, atIndex:0)
+            self.showNextImage()
+            
+            activityIndicator.removeFromSuperview()
+        }
+        
+        
+    }
+    
+    func showNextImage() {
+        currentImageIndex = currentImageIndex + 1
+        self.placeImageView.image = self.flickrPhotos[0].searchResults[currentImageIndex].thumbnail
     }
 }

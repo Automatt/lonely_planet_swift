@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AF1EAD6F1AD0D82500211AF7 /* FlickrSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1EAD6E1AD0D82400211AF7 /* FlickrSearch.swift */; };
 		AF3CAB651ACB7E45007831A6 /* PlacesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3CAB641ACB7E45007831A6 /* PlacesTableViewController.swift */; };
 		AF6A22831ACD0C3900E683E2 /* Destinations.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6A22821ACD0C3900E683E2 /* Destinations.swift */; };
 		AF9E3B5A1ACB3D6B009F8592 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9E3B591ACB3D6B009F8592 /* AppDelegate.swift */; };
@@ -33,6 +34,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AF1EAD6E1AD0D82400211AF7 /* FlickrSearch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlickrSearch.swift; sourceTree = "<group>"; };
 		AF3CAB641ACB7E45007831A6 /* PlacesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlacesTableViewController.swift; sourceTree = "<group>"; };
 		AF5DDE381ACD02AD0033AEF5 /* Destination_parsing.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Destination_parsing.playground; sourceTree = "<group>"; };
 		AF6A22821ACD0C3900E683E2 /* Destinations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Destinations.swift; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 				AF6A22821ACD0C3900E683E2 /* Destinations.swift */,
 				AF3CAB641ACB7E45007831A6 /* PlacesTableViewController.swift */,
 				AFAD325D1ACCFAD400186321 /* PlaceDetailViewController.swift */,
+				AF1EAD6E1AD0D82400211AF7 /* FlickrSearch.swift */,
 				AFE867CC1ACE2A8600A9DF51 /* FactCell.swift */,
 				AF9E3B5D1ACB3D6B009F8592 /* Main.storyboard */,
 				AF9E3B591ACB3D6B009F8592 /* AppDelegate.swift */,
@@ -254,6 +257,7 @@
 				AFAD325E1ACCFAD400186321 /* PlaceDetailViewController.swift in Sources */,
 				AF3CAB651ACB7E45007831A6 /* PlacesTableViewController.swift in Sources */,
 				AF9E3B5A1ACB3D6B009F8592 /* AppDelegate.swift in Sources */,
+				AF1EAD6F1AD0D82500211AF7 /* FlickrSearch.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -79,6 +79,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <imageView key="tableHeaderView" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="DWn-cW-qbP">
+                            <rect key="frame" x="0.0" y="64" width="320" height="108"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </imageView>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="FactCell" rowHeight="82" id="0UU-mo-bwp" customClass="FactCell" customModule="Atlas" customModuleProvider="target">
                                 <autoresizingMask key="autoresizingMask"/>
@@ -120,7 +124,25 @@
                             <outlet property="delegate" destination="HVW-Kk-2SS" id="9Dt-Sy-f1q"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Place Detail" id="Hfo-Z5-JmR"/>
+                    <navigationItem key="navigationItem" title="Place Detail" id="Hfo-Z5-JmR">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="mG0-zd-5m0">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="hr0-hm-yOv">
+                                <rect key="frame" x="-23" y="-15" width="71" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="12"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="loadImage:" destination="HVW-Kk-2SS" eventType="touchUpInside" id="lnZ-sw-NZz"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="imageLoadButton" destination="hr0-hm-yOv" id="tw1-nb-F9y"/>
+                        <outlet property="placeImageView" destination="DWn-cW-qbP" id="rUp-km-MvF"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="di7-9m-w62" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -1,9 +1,9 @@
 //
-//  FlickrSearcher.swift
+//  FlickrSearch.swift
 //  flickrSearch
 //
-//  Created by Richard Turton on 31/07/2014.
-//  Copyright (c) 2014 Razeware. All rights reserved.
+//  Created by Mathew Spolin on 4/4/2015.
+//  Copyright (c) 2015 Automatt. All rights reserved.
 //
 
 import Foundation
@@ -146,7 +146,7 @@ class Flickr {
   private func flickrSearchURLForSearchTerm(searchTerm:String) -> NSURL {
     
     let escapedTerm = searchTerm.stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding)!
-    let URLString = "https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=\(apiKey)&text=\(escapedTerm)&per_page=20&format=json&nojsoncallback=1"
+    let URLString = "https://api.flickr.com/services/rest/?method=flickr.photos.getRecent&api_key=\(apiKey)&text=\(escapedTerm)&per_page=20&format=json&nojsoncallback=1"
     return NSURL(string: URLString)!
   }
   
