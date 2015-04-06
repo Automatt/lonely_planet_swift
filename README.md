@@ -10,6 +10,8 @@ This is just a work in progress and a place to play around with Swift.
 - ~~Show more of available content for each place~~
 - Internal navigation to browse up and down heirarchy
 - ~~Pull a collection of images for each place from Flickr~~
+- Pull full size images, not just a thumbnail; Fix aspect
+- More images of each place, maybe use a collection view
 - Show map element for each place
 - Way to browse all places on a map
 
