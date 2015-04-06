@@ -8,9 +8,8 @@
 
 import UIKit
 
-class PlaceDetailViewController: UITableViewController {
+class PlaceDetailViewController: UITableViewController, UIScrollViewDelegate {
     
-    @IBOutlet weak var placeImageView: UIImageView!
     @IBOutlet weak var imageLoadButton: UIButton!
     
     var placeNode: Node = Node()
@@ -19,8 +18,18 @@ class PlaceDetailViewController: UITableViewController {
     
     let factCellIdentifier = "FactCell"
     let flickr = Flickr()
+    
     var flickrPhotos = [FlickrSearchResults]()
     var currentImageIndex = 0
+    
+    var headerView: UIView!
+    @IBOutlet weak var placeImageView: UIImageView!
+    @IBOutlet weak var placeImageLabel: UILabel!
+    
+    private var tableHeaderHeight: CGFloat = 300.0
+    private let tableCutAway: CGFloat = 80.0
+    var headerMaskLayer: CAShapeLayer!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,6 +44,45 @@ class PlaceDetailViewController: UITableViewController {
             loadFlickrImage()
         }
         
+        headerView = tableView.tableHeaderView
+        tableView.tableHeaderView = nil
+        tableView.addSubview(headerView)
+        
+        let effectiveHeight = tableHeaderHeight - tableCutAway/2
+
+        tableView.contentInset = UIEdgeInsets(top: effectiveHeight, left:0, bottom:0, right: 0)
+        tableView.contentOffset = CGPoint(x:0, y: -effectiveHeight)
+        
+        headerMaskLayer = CAShapeLayer()
+        headerMaskLayer.fillColor = UIColor.blackColor().CGColor
+        headerView.layer.mask = headerMaskLayer
+        
+    
+        
+        updateHeaderView()
+        
+    }
+    
+    func updateHeaderView() {
+        let effectiveHeight = tableHeaderHeight - tableCutAway/2
+
+        var headerRect = CGRect(x:0, y: -effectiveHeight, width: tableView.bounds.width, height: tableHeaderHeight)
+        if tableView.contentOffset.y < -effectiveHeight {
+            headerRect.origin.y = tableView.contentOffset.y
+            headerRect.size.height = -tableView.contentOffset.y + tableCutAway/2
+        }
+        headerView.frame = headerRect
+        
+        let path = UIBezierPath()
+        path.moveToPoint(CGPoint(x:0, y:0))
+        path.addLineToPoint(CGPoint(x: headerRect.width, y:0))
+        path.addLineToPoint(CGPoint(x: headerRect.width, y:headerRect.height))
+        path.addLineToPoint(CGPoint(x: 0, y:headerRect.height - tableCutAway))
+        headerMaskLayer?.path = path.CGPath
+    }
+    
+    override func scrollViewDidScroll(scrollView: UIScrollView) {
+        updateHeaderView()
     }
     
     @IBAction func loadImage(sender: AnyObject) {
@@ -97,12 +145,23 @@ class PlaceDetailViewController: UITableViewController {
             
             activityIndicator.removeFromSuperview()
         }
-        
-        
-    }
+}
     
     func showNextImage() {
         currentImageIndex = currentImageIndex + 1
-        self.placeImageView.image = self.flickrPhotos[0].searchResults[currentImageIndex].thumbnail
+        if currentImageIndex >= self.flickrPhotos[0].searchResults.count {
+            currentImageIndex = 0
+        }
+        self.flickrPhotos[0].searchResults[currentImageIndex].loadLargeImage {
+            photo, error in
+            self.placeImageView.image = photo.largeImage
+            self.placeImageLabel.text = photo.title
+            self.tableHeaderHeight = self.placeImageView.frame.height
+            self.updateHeaderView()
+        }
+
+       // self.placeImageView.size = self.placeImageView.(CGSize(width: placeImageView.frame.width, height:placeImageView.frame.height))
+        
+        
     }
 }
