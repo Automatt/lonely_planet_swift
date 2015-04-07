@@ -1,22 +1,20 @@
 # Atlas
 ## iOS coding exercise
 
-This is a very basic iOS project that uses bundled XML resources to display a list of places and provide a little content about each place.
+This is a very basic iOS project that uses bundled XML resources to display a list of places and provide a little content about each place.  It's a work in progress and a project just to play around a bit with Swift.
+
+## Features
+
+- Parses bundled XML to display list of places and content about each place
+- Fetches high-res images for each place from Flickr
+- Displays high res image in a 'stretchy' header with a mask
 
 ## Improvements to make
 
-This is just a work in progress and a place to play around with Swift.
-
-- ~~Show more of available content for each place~~
 - Internal navigation to browse up and down heirarchy
-- ~~Pull a collection of images for each place from Flickr~~
-- ~~Pull full size images, not just a thumbnail; Fix aspect~~
-- ~~Add a stretchy header when dragged and photo title~~
-- ~~Use a mask to make the header image more interesting and integrated with content~~
 - Use a page view controller to flip through the full size images
-- ~~More images of each place,~~ maybe use a collection view
-- Show map element for each place
-- Way to browse all places on a map
+- Show each place on a map
+- A way to browse all the places on a map
 - Clickable links in content
 
 
