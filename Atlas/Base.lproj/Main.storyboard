@@ -110,33 +110,24 @@
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0UU-mo-bwp" id="pC7-zb-gDj">
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="751" verticalHuggingPriority="751" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="11g-1p-IiO">
-                                            <rect key="frame" x="20" y="20" width="280" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z5f-gS-rzV">
+                                            <rect key="frame" x="8" y="8" width="304" height="23"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="750" verticalHuggingPriority="750" text="Content" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JVZ-Lh-TRz">
-                                            <rect key="frame" x="20" y="45" width="280" height="17"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Content" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lgv-UA-hJv">
+                                            <rect key="frame" x="8" y="41" width="304" height="17"/>
                                             <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="14"/>
                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
-                                    <constraints>
-                                        <constraint firstAttribute="trailing" secondItem="JVZ-Lh-TRz" secondAttribute="trailing" constant="20" id="MEo-ow-gcf"/>
-                                        <constraint firstAttribute="trailing" secondItem="11g-1p-IiO" secondAttribute="trailing" constant="20" id="SbC-qD-MaT"/>
-                                        <constraint firstItem="JVZ-Lh-TRz" firstAttribute="top" secondItem="11g-1p-IiO" secondAttribute="bottom" constant="4" id="agz-5B-mez"/>
-                                        <constraint firstItem="11g-1p-IiO" firstAttribute="leading" secondItem="pC7-zb-gDj" secondAttribute="leading" constant="20" id="ldT-5T-f5s"/>
-                                        <constraint firstItem="JVZ-Lh-TRz" firstAttribute="leading" secondItem="pC7-zb-gDj" secondAttribute="leading" constant="20" id="p5C-2T-3qg"/>
-                                        <constraint firstItem="11g-1p-IiO" firstAttribute="top" secondItem="pC7-zb-gDj" secondAttribute="top" constant="20" id="qfY-3D-Gzr"/>
-                                        <constraint firstAttribute="bottom" secondItem="JVZ-Lh-TRz" secondAttribute="bottom" constant="19.5" id="xbE-OV-lfh"/>
-                                    </constraints>
                                 </tableViewCellContentView>
                                 <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <connections>
-                                    <outlet property="contentLabel" destination="JVZ-Lh-TRz" id="aRH-MA-je9"/>
-                                    <outlet property="titleLabel" destination="11g-1p-IiO" id="XGc-w6-0iP"/>
+                                    <outlet property="contentLabel" destination="lgv-UA-hJv" id="uF0-Fd-Ssz"/>
+                                    <outlet property="titleLabel" destination="z5f-gS-rzV" id="aFd-eA-DOn"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

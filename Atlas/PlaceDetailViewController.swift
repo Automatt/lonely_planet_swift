@@ -23,11 +23,13 @@ class PlaceDetailViewController: UITableViewController, UIScrollViewDelegate {
     var currentImageIndex = 0
     
     var headerView: UIView!
+    
     @IBOutlet weak var placeImageView: UIImageView!
     @IBOutlet weak var placeImageLabel: UILabel!
     
     private var tableHeaderHeight: CGFloat = 300.0
     private let tableCutAway: CGFloat = 80.0
+    
     var headerMaskLayer: CAShapeLayer!
     
     
