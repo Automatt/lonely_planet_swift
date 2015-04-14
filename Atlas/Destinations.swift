@@ -66,13 +66,13 @@ class DestinationParser: NSObject, NSXMLParserDelegate {
         }
     }
     
-    func parser(parser: NSXMLParser!, didStartElement elementName: String!, namespaceURI: String!, qualifiedName qName: String!, attributes attributeDict: NSDictionary!) {
+    func parser(parser: NSXMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [NSObject: AnyObject]) {
         
         switch elementName {
         case "destination":
             currentDestination = Destination()
-            currentDestination.title = attributeDict["title"] as String
-            currentDestination.atlas_id = attributeDict["atlas_id"] as String
+            currentDestination.title = attributeDict["title"] as! String
+            currentDestination.atlas_id = attributeDict["atlas_id"] as! String
             destinations.append(currentDestination)
         default:
             break
@@ -81,18 +81,18 @@ class DestinationParser: NSObject, NSXMLParserDelegate {
         currentElementName = elementName        
     }
     
-    func parser(parser: NSXMLParser!, foundCDATA CDATABlock: NSData!) {
+    func parser(parser: NSXMLParser, foundCDATA CDATABlock: NSData) {
         currentFact = Fact()
-        currentFact.content = NSString(data: CDATABlock, encoding: NSUTF8StringEncoding)!
+        currentFact.content = NSString(data: CDATABlock, encoding: NSUTF8StringEncoding)! as String
         currentFact.title = currentElementName
         currentDestination.facts.append(currentFact)
     }
     
-    func parser(parser: NSXMLParser, foundCharacters string: String!) {
-        foundCharacters += string
+    func parser(parser: NSXMLParser, foundCharacters string: String?) {
+        foundCharacters += string!
     }
     
-    func parser(parser: NSXMLParser!, didEndElement elementName: String!, namespaceURI: String!, qualifiedName qName: String!) {
+    func parser(parser: NSXMLParser, didEndElement elementName: String, namespaceURI: String?, qualifiedName qName: String?) {
         currentElementName = ""
         
     }

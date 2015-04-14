@@ -106,7 +106,7 @@ class PlaceDetailViewController: UITableViewController, UIScrollViewDelegate {
     }
     
     func factCellAtIndexPath(indexPath: NSIndexPath) -> FactCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier(factCellIdentifier) as FactCell
+        let cell = tableView.dequeueReusableCellWithIdentifier(factCellIdentifier) as! FactCell
     
         setTitleForCell(cell, indexPath: indexPath)
         setContentForCell(cell, indexPath: indexPath)
@@ -114,12 +114,12 @@ class PlaceDetailViewController: UITableViewController, UIScrollViewDelegate {
     }
     
     func setTitleForCell(cell:FactCell, indexPath: NSIndexPath) {
-        let item = factItems[indexPath.row] as Fact
+        let item = factItems[indexPath.row] as! Fact
         cell.titleLabel.text = item.title.capitalizedString.replace("_", withString:" ") ?? "[No Title]"
     }
     
     func setContentForCell(cell:FactCell, indexPath: NSIndexPath) {
-        let item = factItems[indexPath.row] as Fact
+        let item = factItems[indexPath.row] as! Fact
         cell.contentLabel.text = item.content ?? "[No Content]"
     }
     

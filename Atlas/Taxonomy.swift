@@ -60,7 +60,7 @@ class TaxonomyParser: NSObject, NSXMLParserDelegate {
         return self.currentTaxonomy
     }
     
-    func parser(parser: NSXMLParser!, didStartElement elementName: String!, namespaceURI: String!, qualifiedName qName: String!, attributes attributeDict: NSDictionary!) {
+    func parser(parser: NSXMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [NSObject: AnyObject]) {
         
         currentElementName = elementName
         currentAttributes = attributeDict
@@ -68,9 +68,9 @@ class TaxonomyParser: NSObject, NSXMLParserDelegate {
         switch currentElementName {
         case "node":
             currentNode = Node()
-            currentNode.atlas_node_id = currentAttributes["atlas_node_id"] as String
-            currentNode.geo_id = currentAttributes["geo_id"] as String
-            currentNode.ethyl_content_object_id = currentAttributes["ethyl_content_object_id"] as String
+            currentNode.atlas_node_id = currentAttributes["atlas_node_id"] as! String
+            currentNode.geo_id = currentAttributes["geo_id"] as! String
+            currentNode.ethyl_content_object_id = currentAttributes["ethyl_content_object_id"] as! String
             
             if nodeStack.nodes.count == 0 {
                 currentTaxonomy.nodes.append(currentNode)

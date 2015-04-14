@@ -36,17 +36,17 @@ class PlacesTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cellIdentifier = "ListPrototypeCell"
-        let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as UITableViewCell
-        let placeItem = self.placesItems.objectAtIndex(indexPath.row) as Node
+        let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! UITableViewCell
+        let placeItem = self.placesItems.objectAtIndex(indexPath.row) as! Node
         cell.textLabel?.text = placeItem.name
         return cell
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "showPlaceDetail" {
-            let placeDetail = segue.destinationViewController as PlaceDetailViewController
+            let placeDetail = segue.destinationViewController as! PlaceDetailViewController
             if let placeIndex = tableView.indexPathForSelectedRow()?.row {
-                let node = placesItems[placeIndex] as Node
+                let node = placesItems[placeIndex] as! Node
                 placeDetail.placeNode = node
                 if let destination = destinations.find(node.atlas_node_id) {
                     placeDetail.placeDestination = destination

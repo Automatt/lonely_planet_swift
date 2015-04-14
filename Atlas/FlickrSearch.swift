@@ -107,7 +107,7 @@ class Flickr {
         return
       }
       
-      switch (resultsDictionary!["stat"] as String) {
+      switch (resultsDictionary!["stat"] as! String) {
       case "ok":
         println("Results processed OK")
       case "fail":
@@ -120,8 +120,8 @@ class Flickr {
         return
       }
       
-      let photosContainer = resultsDictionary!["photos"] as NSDictionary
-      let photosReceived = photosContainer["photo"] as [NSDictionary]
+      let photosContainer = resultsDictionary!["photos"] as! NSDictionary
+      let photosReceived = photosContainer["photo"] as! [NSDictionary]
       
       let flickrPhotos : [FlickrPhoto] = photosReceived.map {
         photoDictionary in
