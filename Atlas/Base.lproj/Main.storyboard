@@ -75,7 +75,7 @@
         <scene sceneID="O2J-em-E2o">
             <objects>
                 <tableViewController id="HVW-Kk-2SS" customClass="PlaceDetailViewController" customModule="Atlas" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="BgR-8h-PG6">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="90" sectionHeaderHeight="22" sectionFooterHeight="22" id="BgR-8h-PG6">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -105,28 +105,41 @@
                             </constraints>
                         </view>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="FactCell" rowHeight="82" id="0UU-mo-bwp" customClass="FactCell" customModule="Atlas" customModuleProvider="target">
+                            <tableViewCell contentMode="top" selectionStyle="none" indentationWidth="10" reuseIdentifier="FactCell" rowHeight="90" id="0UU-mo-bwp" customClass="FactCell" customModule="Atlas" customModuleProvider="target">
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0UU-mo-bwp" id="pC7-zb-gDj">
+                                <tableViewCellContentView key="contentView" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0UU-mo-bwp" id="pC7-zb-gDj">
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z5f-gS-rzV">
-                                            <rect key="frame" x="8" y="8" width="304" height="23"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="751" verticalHuggingPriority="751" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" misplaced="YES" text="Title" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z5f-gS-rzV">
+                                            <rect key="frame" x="20" y="20" width="280" height="20"/>
                                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Content" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lgv-UA-hJv">
-                                            <rect key="frame" x="8" y="41" width="304" height="17"/>
-                                            <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="14"/>
                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" lineBreakMode="characterWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5ao-LV-2iA">
+                                            <rect key="frame" x="20" y="44" width="280" height="38"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="18" id="dmz-8Y-zsJ"/>
+                                            </constraints>
+                                            <string key="text">Thanks - I am resizing cells in a UICollectionView, expanding to show full text when tapped, and resetting the frame of the UILabel to the contentView.bounds was all it needed. –  Adam Eberbach Dec 18 '12 at 11:07</string>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
+                                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="z5f-gS-rzV" firstAttribute="leading" secondItem="pC7-zb-gDj" secondAttribute="leading" constant="20" id="DvR-ZY-4bU"/>
+                                        <constraint firstItem="z5f-gS-rzV" firstAttribute="top" secondItem="pC7-zb-gDj" secondAttribute="top" constant="20" id="KpN-Le-gRl"/>
+                                        <constraint firstAttribute="trailing" secondItem="z5f-gS-rzV" secondAttribute="trailing" constant="20" id="RL9-mO-tSL"/>
+                                        <constraint firstAttribute="trailing" secondItem="5ao-LV-2iA" secondAttribute="trailing" constant="20" id="dPm-gI-6T3"/>
+                                        <constraint firstItem="5ao-LV-2iA" firstAttribute="top" secondItem="z5f-gS-rzV" secondAttribute="bottom" constant="4" id="pKF-QD-TUq"/>
+                                        <constraint firstItem="5ao-LV-2iA" firstAttribute="leading" secondItem="pC7-zb-gDj" secondAttribute="leading" constant="20" id="s3p-6F-nnm"/>
+                                        <constraint firstAttribute="bottom" secondItem="5ao-LV-2iA" secondAttribute="bottom" constant="19.5" id="zDc-xx-QZe"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <connections>
-                                    <outlet property="contentLabel" destination="lgv-UA-hJv" id="uF0-Fd-Ssz"/>
+                                    <outlet property="contentLabel" destination="5ao-LV-2iA" id="VDD-VT-6Pu"/>
                                     <outlet property="titleLabel" destination="z5f-gS-rzV" id="aFd-eA-DOn"/>
                                 </connections>
                             </tableViewCell>
