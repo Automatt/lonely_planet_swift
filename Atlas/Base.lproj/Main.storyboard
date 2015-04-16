@@ -119,7 +119,7 @@
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" lineBreakMode="characterWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5ao-LV-2iA">
                                             <rect key="frame" x="20" y="44" width="280" height="38"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="18" id="dmz-8Y-zsJ"/>
+                                                <constraint firstAttribute="height" relation="greaterThanOrEqual" priority="500" constant="18" id="dmz-8Y-zsJ"/>
                                             </constraints>
                                             <string key="text">Thanks - I am resizing cells in a UICollectionView, expanding to show full text when tapped, and resetting the frame of the UILabel to the contentView.bounds was all it needed. –  Adam Eberbach Dec 18 '12 at 11:07</string>
                                             <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
